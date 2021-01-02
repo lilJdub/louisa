@@ -88,7 +88,7 @@
 			</div>	
 		</div>
 		<div id="id01" class="modal">
-  			<form class="modal-content animate" action="/action_page.php" method="post">
+  			<form class="modal-content animate" action="首頁.php" method="GET">
     			<div class="imgcontainer">
       				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       				<img src="Louisa_Coffee_Logo.jpg" alt="Avatar" class="avatar">
@@ -112,7 +112,6 @@
 		<script>
 			// Get the modal
 			var modal = document.getElementById('id01');
-
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
     			if (event.target == modal) {

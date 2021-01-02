@@ -37,5 +37,18 @@
 			<button onclick="window.location.href='顧關.php';">會員資訊系統</button>
 			<button onclick="window.location.href='庫管.php';">庫存管理系統</button>
 		</div>
+		<p id="nothing" style="color: white;display:flex;align-items:center;justify-content:center;font-size:25px"></p>
+		<script type="text/javascript">
+			const queryString = window.location.search;
+			console.log(queryString);
+			const urlParams = new URLSearchParams(queryString);
+			const user = urlParams.get('uname')
+			var username=user
+			if(user!=null)
+			{
+				alert(user+"，你好!")
+				document.getElementById("nothing").innerHTML=user+" 歡迎進入";
+			}
+		</script>
 	</body>
 </html>
