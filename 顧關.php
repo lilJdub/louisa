@@ -88,7 +88,7 @@
 		<script>
 			function openpage2()
 			{
-				document.getElementById("welc").setAttribute("src", "消費行為管理.php");
+				document.getElementById("welc").setAttribute("src", "消費行為.php");
 			}
 		</script>
 		<script>

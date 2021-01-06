@@ -5,6 +5,8 @@
 	require_once('connect.php');
 	
 	//查詢所有用戶
+	$res = $mysqli->query("SELECT * FROM `Purchase_Behavior` WHERE Member_Id=107306077");	
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,25 +17,23 @@
 	</style>
 </head>
 <body>
-	<form action="welcome_get.php" method="post">
-		<div>
-			<input type="text" name="ordNum" placeholder="請輸入訂單號碼">
+	<div>
+		<input type="text" name="ordNum" placeholder="請輸入訂單號碼">
 		
-			<button id="searchbtn" onclick="defaulttable()" type="submit" style="float: right;border-radius:2px;padding:2px 13px;">搜尋</button>
-			<input type="text" name="stuff" placeholder="這邊沒寫完@@"style="float: right;">
-			<small style="float: right;">包括品項</small>
-			<input type="text" name="PurchaseTime" placeholder="N/A"style="float: right;">
-			<small style="float: right;">最近購物時間</small>
-			<input type="text" name="BuyerName" placeholder="N/A"style="float: right;">
-			<small style="float: right;">請輸入購買人姓名</small>
-			<input type="text" name="MemID" placeholder="N/A"style="float: right;">
-			<small style="float: right;">請輸入會員ID</small> 
-		</div>
-	</form>
+		<button id="searchbtn" onclick="defaulttable()" style="float: right;border-radius:2px;padding:2px 13px;">搜尋</button>
+		<input type="text" name="stuff" placeholder="這邊沒寫完@@"style="float: right;">
+		<small style="float: right;">包括品項</small>
+		<input type="text" name="PurchaseTime" placeholder="N/A"style="float: right;">
+		<small style="float: right;">最近購物時間</small>
+		<input type="text" name="BuyerName" placeholder="N/A"style="float: right;">
+		<small style="float: right;">請輸入購買人姓名</small>
+		<input type="text" name="MemID" placeholder="N/A"style="float: right;">
+		<small style="float: right;">請輸入會員ID</small> 
+	</div>
 	<script type="text/javascript">
 		function defaulttable()
 		{
-			location.replace("消費行為管理.php");
+			location.replace("查詢消費.php");
 		}
 	</script>
 	<table id="tb1" border="1" width="100%">
